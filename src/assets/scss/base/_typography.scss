@@ -1,0 +1,42 @@
+// Font Family import by Google Fonts API
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap");
+
+// Set base font family
+html,
+body {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: $c-light-100;
+}
+
+// Page title (h1)
+.t-page {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+
+    @media #{$mq-lg} {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+
+        @media #{$mq-lg} {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+// Section title (h2)
+.t-section {
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 34px;
+
+    @include modifier(highlight) {
+        
+    }
+}
