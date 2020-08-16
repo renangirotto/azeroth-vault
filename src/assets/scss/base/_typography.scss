@@ -7,6 +7,7 @@ body {
     font-family: Poppins, sans-serif;
     font-weight: 500;
     font-style: normal;
+    font-size: 16px;
     color: $c-light-100;
 }
 
@@ -23,10 +24,6 @@ body {
 
     &:not(:last-child) {
         margin-bottom: 16px;
-
-        @media #{$mq-lg} {
-            margin-bottom: 24px;
-        }
     }
 }
 
@@ -38,5 +35,27 @@ body {
 
     @include modifier(highlight) {
         
+    }
+}
+
+// Paragraph (p)
+p {
+    font-size: 18px;
+    line-height: 26px;
+
+    &:not(:last-child) {
+        margin-bottom: 56px;
+    }
+}
+
+// Highlight text, with the hover effect of a bottom line that fill the background (element > span)
+.t-highlight {
+    display: inline-block;
+    position: relative;
+    color: $c-dark-600;
+    background-color: $c-amber-200;
+
+    span {
+        margin: 0 3px;
     }
 }

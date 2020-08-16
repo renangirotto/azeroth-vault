@@ -1,28 +1,38 @@
 <template>
   <div id="app">
-    <c-navbar/>
     <main>
-      <v-read-list />
+      <v-reputations />
     </main>
   </div>
 </template>
 
 <script>
-import cNavbar from '@/components/c-navbar.vue'
-import vReadList from '@/views/v-readList'
+import vReputations from "@/views/v-reputations";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    cNavbar,
-    vReadList
-  }
-}
+    vReputations,
+  },
+};
 </script>
 
 <style lang="scss">
-html, body {
-  background-color: $c-dark-900;
+html,
+body {
+  background-color: $c-dark-800;
+
+  // Change text select
+  ::-moz-selection {
+    /* Code for Firefox */
+    background-color: $c-deepPurple-200;
+    color: $c-light-100;
+  }
+  // Change text select
+  ::selection {
+    background-color: $c-deepPurple-200;
+    color: $c-light-100;
+  }
 }
 
 main {
@@ -30,7 +40,7 @@ main {
   max-width: 768px;
   min-height: calc(100vh - 56px);
   padding: 24px;
-  margin: 0 auto;
+  margin: 0 auto 56px;
 
   @media #{$mq-lg} {
     max-width: 1024px;

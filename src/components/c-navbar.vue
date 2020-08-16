@@ -1,11 +1,11 @@
 <template>
-  <div class="navbar">
-    <div class="navbar__nav">
+  <div class="c-navbar">
+    <div class="c-navbar__nav">
       <button
         v-for="(item, index) in menuItems"
         :key="index"
         :title="item.title"
-        class="navbar__nav__item"
+        class="c-navbar__nav__item"
       >
         <c-icons :name="item.icon" />
       </button>
@@ -47,7 +47,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.navbar {
+.c-navbar {
   min-height: 55px;
   max-height: 55px;
   position: fixed;
@@ -116,7 +116,7 @@ export default {
 
       // selected modifier when item is related to route
       @include modifier(selected) {
-        @extend .navbar__nav__item;
+        @extend .c-navbar__nav__item;
 
         &:hover {
             &::before {
