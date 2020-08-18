@@ -57,12 +57,49 @@
         </div>
       </li>
     </ul>
+    <div class="c-reputation__subList">
+      <c-accordion title="Teste">
+        <template v-slot:container>
+          <ul class="c-reputation__list">
+            <li class="c-reputation__list__item">
+              <a href="#" target="_blank">Faction Name</a>
+              <div class="c-reputation__list__item__progress--hated" data-info="Neutral - 500/1000">
+                <span style="width:50%" data-max="100" data-value="80"></span>
+              </div>
+            </li>
+            <li class="c-reputation__list__item">
+              <a href="#" target="_blank">Faction Name</a>
+              <div
+                class="c-reputation__list__item__progress--hostile"
+                data-info="Neutral - 500/1000"
+              >
+                <span style="width:50%" data-max="100" data-value="80"></span>
+              </div>
+            </li>
+            <li class="c-reputation__list__item">
+              <a href="#" target="_blank">Faction Name</a>
+              <div
+                class="c-reputation__list__item__progress--unfriendly"
+                data-info="Neutral - 500/1000"
+              >
+                <span style="width:50%" data-max="100" data-value="80"></span>
+              </div>
+            </li>
+          </ul>
+        </template>
+      </c-accordion>
+    </div>
   </div>
 </template>
 
 <script>
+import cAccordion from "@/components/c-accordion.vue";
+
 export default {
   name: "c-reputation",
+  components: {
+    cAccordion,
+  },
 };
 </script>
 
@@ -80,6 +117,10 @@ export default {
 
   // list of faction name + reputation progress
   @include element(list) {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
     // individual faction
     @include element(item) {
       &:not(:last-child) {
@@ -201,6 +242,18 @@ export default {
           }
         }
       }
+    }
+  }
+
+  // for expansion divisions
+  @include element(subList) {
+    padding-left: 16px;
+  }
+
+  // custom style for accordion
+  .c-accordion {
+    &:not(:last-child) {
+      margin-bottom: 24px;
     }
   }
 }

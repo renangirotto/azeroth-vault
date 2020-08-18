@@ -13,7 +13,7 @@ export default {
   name: "App",
   components: {
     vReputations,
-  },
+  }
 };
 </script>
 
@@ -43,7 +43,7 @@ main {
   margin: 0 auto 56px;
 
   @media #{$mq-lg} {
-    max-width: 1024px;
+    max-width: 1200px;
     min-height: calc(100vh - 64px);
     padding: 64px 16px 64px;
     margin: 0 auto;

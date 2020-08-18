@@ -51,7 +51,7 @@ export default {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
       grid-column-gap: 32px;
-      grid-row-gap: 44px;
+      grid-row-gap: 56px;
 
       @media #{$mq-sm} {
         grid-template-columns: 1fr 1fr;
@@ -59,6 +59,10 @@ export default {
 
       @media #{$mq-lg} {
         grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      @media #{$mq-xl} {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
 
       // grid child
