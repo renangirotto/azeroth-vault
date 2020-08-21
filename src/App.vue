@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <main>
-      <v-reputations />
+      <v-search />
     </main>
   </div>
 </template>
 
 <script>
-import vReputations from "@/views/v-reputations";
+import vSearch from "@/views/v-search";
 
 export default {
   name: "App",
   components: {
-    vReputations,
+    vSearch,
   }
 };
 </script>
@@ -38,14 +38,16 @@ body {
 main {
   box-sizing: border-box;
   max-width: 768px;
-  min-height: calc(100vh - 56px);
-  padding: 24px;
-  margin: 0 auto 56px;
+  min-height: 100vh;
+  padding: 48px 24px;
+  margin: 0 auto;
+
+  @media #{$mq-md} {
+    padding: 64px 16px;
+  }
 
   @media #{$mq-lg} {
     max-width: 1200px;
-    min-height: calc(100vh - 64px);
-    padding: 64px 16px 64px;
     margin: 0 auto;
   }
 }

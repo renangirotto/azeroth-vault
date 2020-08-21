@@ -11,6 +11,25 @@ body {
     color: $c-light-100;
 }
 
+// Hero title, used in the search view (h1)
+.t-hero {
+    font-weight: 700;
+    font-size: 44px;
+    text-align: center;
+
+    @media #{$mq-sm} {
+        font-size: 48px;
+    }
+
+    @media #{$mq-md} {
+        font-size: 56px;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
 // Page title (h1)
 .t-page {
     font-weight: 700;
@@ -58,4 +77,12 @@ p {
     span {
         margin: 0 3px;
     }
+}
+
+// Inputs
+input {
+    font-family: Poppins, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 16px;
 }
